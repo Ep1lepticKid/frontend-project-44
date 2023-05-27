@@ -1,27 +1,17 @@
 #!/usr/bin/env node.
-
+import runGame from '../index.js';
 import * as readlineSync from '../../node_modules/readline-sync/lib/readline-sync.js';
 
-const evenGame = () => { 
-    console.log ('Welcome to the Brain Games!');
-    const userName = readlineSync.question('May I have your name?');
-    console.log ('Hello', userName);
+const startEvenGame = () => { 
+    const discription = ('Компьютер говорит случайное число, ваша задача, написать ответ четное оно или нет. Принимаются ответы yes/no');
+    const rounds = [];
     for (let i = 0; i < 3; i ++){
+        rounds[i] = [];
         let number = Math.floor(Math.random()*99+1);
-        let numberStatus = number % 2 == 0? 'yes': 'no';
-        console.log (`Question: ${number}`);
-        const userAnswer = readlineSync.question('You answer:');
-        if (userAnswer == numberStatus) {
-            console.log('Correct');
-        }
-        else{
-            console.log(`Your answer "${userAnswer}" was wrong the correcrt answer is ${numberStatus}`);
-            console.log('You loooose, godbye! \nTry again later');
-            return
-        }
-        
-
-    }
-    console.log('!!!Victory!!!');
+        let questionAnswer = number % 2 == 0? 'yes': 'no';
+        rounds[i].push(number, questionAnswer);  
 }
-export default evenGame
+runGame(rounds, discription);     
+}
+
+export default startEvenGame
