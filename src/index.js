@@ -16,12 +16,12 @@ const runGameMain = (rounds, discription) =>{
             console.log ('Correct');
         }
         else {
-            console.log (`Your answer "${userAnswer}" is not correct. Correct answer was: ${answer}`);
-            console.log (`Let's try again ${userName}, good luck!`);
+            console.log (`Your answer "${userAnswer}!" \n${userAnswer} is not correct. Correct answer was: ${answer}`);
+            console.log (`Let's try again ${userName}`);
             return
         }
     }
-    console.log(`Congratulations, ${userName}`);
+    console.log(`Congratulations, ${userName}!`);
 }
 
 export  default runGameMain

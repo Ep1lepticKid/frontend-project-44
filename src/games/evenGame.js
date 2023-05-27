@@ -3,7 +3,7 @@ import runGame from '../index.js';
 import * as readlineSync from '../../node_modules/readline-sync/lib/readline-sync.js';
 
 const startEvenGame = () => { 
-    const discription = ('Компьютер говорит случайное число, ваша задача, написать ответ четное оно или нет. Принимаются ответы yes/no');
+    const discription = ('Answer "yes" if the number is even, otherwise answer "no"');
     const rounds = [];
     for (let i = 0; i < 3; i ++){
         rounds[i] = [];

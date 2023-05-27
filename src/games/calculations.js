@@ -3,7 +3,7 @@ import runGameMain from '../index.js';
 import * as readlineSync from '../../node_modules/readline-sync/lib/readline-sync.js';
 
 const startCalcGame = () => { 
-    const discription = ('Компьютер говорит уравнение, ваша задача написать ответ. Принимаются ответы в числовом варианте.');
+    const discription = ('What is the result of the expression?');
     const rounds = [];
     const task = ['+', '-', '*'];
     for (let i = 0; i < 3; i ++){

@@ -4,7 +4,7 @@ import * as readlineSync from '../../node_modules/readline-sync/lib/readline-syn
 import { question } from 'readline-sync';
 
 const startProgressionGame = () => { 
-    const discription = ('Компьютер сообщает последовательность чисел, вам надо найти пропущенное число. Принимаются ответы в числовом варианте.');
+    const discription = ('What number is missing in the progression?');
     const rounds = [];
     let questionAnswer = 0;
     for (let i = 0; i < 3; i++) {

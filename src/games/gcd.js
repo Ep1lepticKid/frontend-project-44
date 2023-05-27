@@ -3,7 +3,7 @@ import runGameMain from '../index.js';
 import * as readlineSync from '../../node_modules/readline-sync/lib/readline-sync.js';
 
 const startGcdGame = () => { 
-    const discription = ('Компьютер сообщает два числа, ваша задача найти наименьший общий делитель. Принимаются ответы в числовом варианте.');
+    const discription = ('Find the greatest common divisor of given numbers.');
     const rounds = [];
     for (let i = 0; i < 3; i++) {
         let questionAnswer = 0;
